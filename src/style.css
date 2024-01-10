@@ -16,15 +16,3 @@
 }
 
 
-ul li a{
-    padding: 10px;
-}
-
-
-ul li a:hover{
-    padding: 10px;
-    border-radius: 5px;
-
-}
-
-#check:checked ~ ul {}

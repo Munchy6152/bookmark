@@ -14,24 +14,37 @@
 </head>
 <body class="font=Poppins">
     <!-----header-->
-    <header>
-        <nav class="container flex items-center py-4 mt-4 sm:mt-12" >
-            <div class="py-1"><img src="./images/group-11.svg"></div>
-            <ul class="hidden sm:flex flex-1 justify-end items-center gap-12 text-bookmark-blue uppercase text-xs">
-                <li class="cursor-pointer">Features</li>
-                <li class="cursor-pointer">Pricing</li>
-                <li class="cursor-pointer">Contact</li>
-                <button type="button" class="bg-bookmark-red text-white rounded-md px-7 py-3 uppercase">Login</button>
-            </ul>
-            
-            <div class="flex sm:hidden flex-1 justify-end">
-                <i class="text-2xl fa fa-bars"></i>
-            </div>
+<header>
+       <!-- component -->
+            <!-- component -->
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+<div class="min-h-screen  mt-4 sm:mt-12 pt-8" >
+    <div class="antialiased bg-gray-100 dark-mode:bg-gray-900 pt-8">
+    <div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
+      <div x-data="{ open: true }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+        <div class="flex flex-row items-center justify-between p-4">
+          <div class="py-1"><img src="./images/group-11.svg"></div>
+          <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+            <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+              <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+              <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row container flex items-center py-4 mt-4 sm:mt-12">
+          <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">FEATURES</a>
+          <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">PRICING</a>
+          <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">CONTACT</a>
+          <a class=" px-4 py-2 mt-2 text-sm font-semibold bg-bookmark-red text-white  rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">LOGIN</a>   
         </nav>
+      </div>
+    </div>
+  </div>
+    </div>
     </header>
 
     <!---hero section-->
-    <section class="relative">
+    <section class="relative pb-8">
         <div class="container flex flex-col-reverse lg:flex-row items-center gap-12 mt-14 lg:mt-28">
             <!----content-->
             <div class="flex flex-1 flex-col items-center lg:items-start">
@@ -74,106 +87,7 @@
     </section>
 
 
-    <!---tabs1--
-
-    
-        <div class="container">
-            <div class="tab_box">
-                <button class="tab_btn">Simple Bookmarking</button>
-                <button class="tab_btn">Speedy Searching</button>
-                <button class="tab_btn">Easy Sharing</button>
-            </div>
-            <div class="content_box">
-                <div class="content">
-                    <div class="container flex flex-col-reverse lg:flex-row items-center gap-12 mt-14 lg:mt-28">
-
-                        ----content--
-
-                        <div class="flex flex-1 flex-col items-center lg:items-start">
-                            <h2 class="text-bookmark-blue text-3xl md:text-4 lg:text-5xl text-center lg:text-left mb-6">
-                                Bookmark in one click
-                            </h2>
-                            <p class="text-bookmark-gray text-lg text-center lg:text-left mb-6">
-                                Organize your bookmarks however you like. 
-                                Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.
-                            </p>
-                            <div class="flex justify-center flex-wrap gap-6">
-                                <button type="button" class="btn btn-purple hover:bg-bookmark-white hover:text-black">
-                                    Get it on Chrome
-                                </button>
-                            </div>
-                        </div>
-
-                        --image--
-
-                        <div class="flex justify-center flex-1 mb-10 md:mb-16 lg:mb-0 z-10">
-                            <img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full" src="./images/illustration-features-tab-1.svg">
-                        </div>
-                    </div>
-                </div>
-                <div class="content">
-                    <div class="container flex flex-col-reverse lg:flex-row items-center gap-12 mt-14 lg:mt-28">
-
-                        ----content--
-
-                        <div class="flex flex-1 flex-col items-center lg:items-start">
-                            <h2 class="text-bookmark-blue text-3xl md:text-4 lg:text-5xl text-center lg:text-left mb-6">
-                                A Simple Bookmark Manager
-                            </h2>
-                            <p class="text-bookmark-gray text-lg text-center lg:text-left mb-6">
-                                A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites 
-                                load instantly. Try it for free.
-                            </p>
-                            <div class="flex justify-center flex-wrap gap-6">
-                                <button type="button" class="btn btn-purple hover:bg-bookmark-white hover:text-black">
-                                    Get it on Chrome
-                                </button>
-                                <button type="button" class="btn btn-white hover:bg-bookmark-purple hover:text-white">
-                                    Get it on Firefox
-                                </button>
-                            </div>
-                        </div>
-
-                        --image--
-
-                        <div class="flex justify-center flex-1 mb-10 md:mb-16 lg:mb-0 z-10">
-                            <img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full" src="./images/group-2.svg">
-                        </div>
-                    </div>
-                </div>
-                <div class="content">
-                    <div class="container flex flex-col-reverse lg:flex-row items-center gap-12 mt-14 lg:mt-28">
-
-                        ----content--
-
-                        <div class="flex flex-1 flex-col items-center lg:items-start">
-                            <h2 class="text-bookmark-blue text-3xl md:text-4 lg:text-5xl text-center lg:text-left mb-6">
-                                A Simple Bookmark Manager
-                            </h2>
-                            <p class="text-bookmark-gray text-lg text-center lg:text-left mb-6">
-                                A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites 
-                                load instantly. Try it for free.
-                            </p>
-                            <div class="flex justify-center flex-wrap gap-6">
-                                <button type="button" class="btn btn-purple hover:bg-bookmark-white hover:text-black">
-                                    Get it on Chrome
-                                </button>
-                                <button type="button" class="btn btn-white hover:bg-bookmark-purple hover:text-white">
-                                    Get it on Firefox
-                                </button>
-                            </div>
-                        </div>
-
-                        --image--
-
-                        <div class="flex justify-center flex-1 mb-10 md:mb-16 lg:mb-0 z-10">
-                            <img class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full" src="./images/group-2.svg">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> ---->
-
+   
   <!---features1-->
   <div class="relative mt-20 lg:mt-24">
     <div class="container flex flex-col lg:flex-row items-center justify-center gap-x-24">
@@ -250,7 +164,7 @@
 </div>
 
   
-<!--downloand section-->
+<!--download section-->
 <section class="py-20 mt-20">
     <div class="sm:w-3/4 lg:w-5/12 mx-auto px-2">
         <h1 class=" text-3xl text-center text-bookmark-blue">Download the extension</h1>
