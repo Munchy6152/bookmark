@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap">
+
     <link rel="stylesheet" href="./style.css">
     <title>Bookmark Landing Page</title>
     <!---<script src="https://cdn.tailwindcss.com"></script> --->
@@ -18,7 +20,7 @@
        <!-- component -->
             <!-- component -->
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-<div class="min-h-screen  mt-4 sm:mt-12 pt-8" >
+<div class="mt-4 sm:mt-12 pt-8" >
     <div class="antialiased bg-gray-100 dark-mode:bg-gray-900 pt-8">
     <div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
       <div x-data="{ open: true }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
@@ -30,11 +32,11 @@
               <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
             </svg>
           </button>
-        </div>
+           </div>
         <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row container flex items-center py-4 mt-4 sm:mt-12">
-          <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">FEATURES</a>
-          <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">PRICING</a>
-          <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">CONTACT</a>
+          <a class="px-4 py-2 mt-2 text-sm font-semibold    md:mt-0 md:ml-4 hover:text-red-500 " href="#">FEATURES</a>
+          <a class="px-4 py-2 mt-2 text-sm font-semibold  md:mt-0 md:ml-4 hover:text-red-500" href="#">PRICING</a>
+          <a class="px-4 py-2 mt-2 text-sm font-semibold  md:mt-0 md:ml-4 hover:text-red-500" href="#">CONTACT</a>
           <a class=" px-4 py-2 mt-2 text-sm font-semibold bg-bookmark-red text-white  rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">LOGIN</a>   
         </nav>
       </div>
@@ -48,7 +50,7 @@
         <div class="container flex flex-col-reverse lg:flex-row items-center gap-12 mt-14 lg:mt-28">
             <!----content-->
             <div class="flex flex-1 flex-col items-center lg:items-start">
-                <h2 class="text-bookmark-blue text-3xl md:text-4 lg:text-5xl text-center lg:text-left mb-6">
+                <h2 class="text-bookmark-blue text-3xl md:text-4 lg:text-5xl text-center lg:text-left mb-6 font-rubik font-medium">
                     A Simple Bookmark Manager
                 </h2>
                 <p class="text-bookmark-grey text-lg text-center lg:text-left mb-6">
@@ -78,7 +80,7 @@
     <section class="bg-bookmark-white py-20 mt-20 lg:mt-60">
         <!----heading-->
         <div class="sm:w-3/4 lg:w-5/12 mx-auto px-2 ">
-            <h1 class=" text-3xl text-center text-bookmark-blue">Features</h1>
+            <h1 class=" text-3xl text-center text-bookmark-blue font-medium">Features</h1>
             <p class="text-center text-bookmark-gray mt-4 ">
                 Our aim is to make it quick and easy for you to access your favourite websites.
                 Your bookmarks sync between your devices so you can access them on the go.
@@ -87,18 +89,140 @@
     </section>
 
 
+
+    <!----exAample-->
+    <!-- component -->
+<div class="w-1/2 mx-auto mt-4  rounded">
+    <!-- Tabs -->
+    <ul id="tabs" class="inline-flex w-full px-1 pt-2 ">
+      <li class="px-4 py-2 -mb-px text-bookmark-blue font-medium"><a id="default-tab" href="#first">Simple Bookmarking</a></li>
+      <li class="px-4 py-2 text-bookmark-blue font-medium"><a href="#second">Speedy Searching</a></li>
+      <li class="px-4 py-2 text-bookmark-blue font-medium"><a href="#third">Easy Sharing</a></li>
+    </ul>
+
+    <!-- Tab Contents -->
+    <div id="tab-contents" class="sm:flex-row">
+      <div id="first" class="p-4 ">
+        <div class="relative mt-20 lg:mt-24">
+            <div class="container flex flex-col lg:flex-row items-center justify-center gap-x-24">
+                <!--image-->
+                <div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
+                    <img class="w-5\6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full"
+                     src="images/illustration-features-tab-1.svg" alt="">
+                </div>
+                <!--content-->
+                <div class="flex flex-1 flex-col items-center lg:items-start">
+                    <h1 class="text-3xl text-bookmark-blue font-medium">Bookmark in one click</h1>
+                    <p class="text-bookmark-grey my-4  text-center lg:text-left sm:w-3/4 lg:w-full">
+                        Organize your bookmarks however you like.
+                        Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.
+                    </p>
+                    <button type="button" class="btn btn-purple hover:bg-bookmark-white hover:text-black">
+                        More info
+                    </button>
+                </div>
+            </div>
+            <!---rounded rectangle-->
+            <div class="hidden lg:block overflow-hidden bg-bookmark-purple rounded-r-full absolute 
+            h-80 w-2/4 -bottom-24 -left-36"></div>
+        </div>
+      </div>
+      <div id="second" class="hidden p-4">
+        <div class="relative mt-20 lg:mt-24">
+            <div class="container flex flex-col lg:flex-row items-center justify-center gap-x-24">
+                <!--image-->
+                <div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
+                    <img class="w-5\6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full"
+                     src="images/illustration-features-tab-2.svg" alt="">
+                </div>
+                <!--content-->
+                <div class="flex flex-1 flex-col items-center lg:items-start">
+                    <h1 class="text-3xl text-bookmark-blue font-medium">Intelligent search</h1>
+                    <p class="text-bookmark-grey my-4  text-center lg:text-left sm:w-3/4 lg:w-full">
+                        Our powerful search feature will help you find saved sites in no time at all. 
+                        No need to trawl through all of your bookmarks.
+                    </p>
+                    <button type="button" class="btn btn-purple hover:bg-bookmark-white hover:text-black">
+                        More info
+                    </button>
+                </div>
+            </div>
+            <!---rounded rectangle-->
+            <div class="hidden lg:block overflow-hidden bg-bookmark-purple rounded-r-full absolute 
+            h-80 w-2/4 -bottom-24 -left-36"></div>
+        </div>
+       </div>
+      <div id="third" class="hidden p-4">
+        <div class="relative mt-20 lg:mt-24">
+            <div class="container flex flex-col lg:flex-row items-center justify-center gap-x-24">
+                <!--image-->
+                <div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
+                    <img class="w-5\6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full"
+                     src="images/illustration-features-tab-3.svg" alt="">
+                </div>
+                <!--content-->
+                <div class="flex flex-1 flex-col items-center lg:items-start">
+                    <h1 class="text-3xl text-bookmark-blue font-medium">Share your bookmarks</h1>
+                    <p class="text-bookmark-grey my-4  text-center lg:text-left sm:w-3/4 lg:w-full">
+                        Easily share your bookmarks and collections with others. 
+                        Create a shareable link that you can send at the click of a button.
+                    </p>
+                    <button type="button" class="btn btn-purple hover:bg-bookmark-white hover:text-black">
+                        More info
+                    </button>
+                </div>
+            </div>
+            <!---rounded rectangle-->
+            <div class="hidden lg:block overflow-hidden bg-bookmark-purple rounded-r-full absolute 
+            h-80 w-2/4 -bottom-24 -left-36"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+let tabsContainer = document.querySelector("#tabs");
+
+let tabTogglers = tabsContainer.querySelectorAll("a");
+console.log(tabTogglers);
+
+tabTogglers.forEach(function(toggler) {
+toggler.addEventListener("click", function(e) {
+e.preventDefault();
+
+let tabName = this.getAttribute("href");
+
+let tabContents = document.querySelector("#tab-contents");
+
+for (let i = 0; i < tabContents.children.length; i++) {
+
+tabTogglers[i].parentElement.classList.remove("border-red-400", "border-b",  "-mb-px", "opacity-100");  tabContents.children[i].classList.remove("hidden");
+if ("#" + tabContents.children[i].id === tabName) {
+continue;
+}
+tabContents.children[i].classList.add("hidden");
+
+}
+e.target.parentElement.classList.add("border-red-400", "border-b-4", "-mb-px", "opacity-100");
+});
+});
+
+document.getElementById("default-tab").click();
+
+</script>
+
    
   <!---features1-->
-  <div class="relative mt-20 lg:mt-24">
+ <!---- <div class="relative mt-20 lg:mt-24">
     <div class="container flex flex-col lg:flex-row items-center justify-center gap-x-24">
-        <!--image-->
+        !--image--
         <div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
             <img class="w-5\6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full"
              src="images/illustration-features-tab-1.svg" alt="">
         </div>
-        <!--content-->
+        !--content--
         <div class="flex flex-1 flex-col items-center lg:items-start">
-            <h1 class="text-3xl text-bookmark-blue">Bookmark in one click</h1>
+            <h1 class="text-3xl text-bookmark-blue font-medium">Bookmark in one click</h1>
             <p class="text-bookmark-grey my-4  text-center lg:text-left sm:w-3/4 lg:w-full">
                 Organize your bookmarks however you like.
                 Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.
@@ -108,22 +232,22 @@
             </button>
         </div>
     </div>
-    <!---rounded rectangle-->
+    !---rounded rectangle--
     <div class="hidden lg:block overflow-hidden bg-bookmark-purple rounded-r-full absolute 
     h-80 w-2/4 -bottom-24 -left-36"></div>
-</div>
+</div> --->
 
 <!---features2-->
-<div class="relative mt-20 lg:mt-52">
+<!--<div class="relative mt-20 lg:mt-52">
     <div class="container flex flex-col lg:flex-row-reverse items-center justify-center gap-x-24">
-        <!--image-->
+        !--image--
         <div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
             <img class="w-5\6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full"
              src="images/illustration-features-tab-2.svg" alt="">
         </div>
-        <!--content-->
+        !--content--
         <div class="flex flex-1 flex-col items-center lg:items-start">
-            <h1 class="text-3xl text-bookmark-blue">Intelligent search</h1>
+            <h1 class="text-3xl text-bookmark-blue font-medium">Intelligent search</h1>
             <p class="text-bookmark-grey my-4  text-center lg:text-left sm:w-3/4 lg:w-full">
                 Our powerful search feature will help you find saved sites in no time at all. 
                 No need to trawl through all of your bookmarks.
@@ -133,22 +257,22 @@
             </button>
         </div>
     </div>
-    <!---rounded rectangle-->
+    !---rounded rectangle--
     <div class="hidden lg:block overflow-hidden bg-bookmark-purple rounded-l-full absolute 
     h-80 w-2/4 -bottom-24 -right-36"></div>
 </div>
 
-   <!---features3-->
+   !---features3--
    <div class="relative mt-20 lg:mt-52">
     <div class="container flex flex-col lg:flex-row items-center justify-center gap-x-24">
-        <!--image-->
+        !--image--
         <div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
             <img class="w-5\6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full"
              src="images/illustration-features-tab-3.svg" alt="">
         </div>
-        <!--content-->
+        !--content--
         <div class="flex flex-1 flex-col items-center lg:items-start">
-            <h1 class="text-3xl text-bookmark-blue">Share your bookmarksBookmark in one click</h1>
+            <h1 class="text-3xl text-bookmark-blue font-medium">Share your bookmarks</h1>
             <p class="text-bookmark-grey my-4  text-center lg:text-left sm:w-3/4 lg:w-full">
                 Easily share your bookmarks and collections with others. 
                 Create a shareable link that you can send at the click of a button.
@@ -158,17 +282,17 @@
             </button>
         </div>
     </div>
-    <!---rounded rectangle-->
+    !---rounded rectangle--
     <div class="hidden lg:block overflow-hidden bg-bookmark-purple rounded-r-full absolute 
     h-80 w-2/4 -bottom-24 -left-36"></div>
-</div>
+</div> -->
 
   
 <!--download section-->
 <section class="py-20 mt-20">
     <div class="sm:w-3/4 lg:w-5/12 mx-auto px-2">
-        <h1 class=" text-3xl text-center text-bookmark-blue">Download the extension</h1>
-        <p class="text-center text-bokmark-grey mt-4 ">
+        <h1 class=" text-3xl text-center text-bookmark-blue font-medium">Download the extension</h1>
+        <p class="text-center text-bookmark-blue mt-4 ">
             We’ve got more browsers in the pipeline. Please do let us know if you’ve got a
              favourite you’d like us to prioritize.
         </p>
@@ -236,7 +360,7 @@
 	<div class="grid divide-y divide-neutral-200 max-w-xl mx-auto mt-8">
 		<div class="py-5">
 			<details class="group">
-				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+				<summary class="flex justify-between items-center font-medium cursor-pointer list-none hover:text-red-500">
 					<span> What is Bookmark? </span>
 					<span class="transition group-open:rotate-180">
                 <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
@@ -252,7 +376,7 @@
 		</div>
 		<div class="py-5">
 			<details class="group">
-				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+				<summary class="flex justify-between items-center font-medium cursor-pointer list-none hover:text-red-500">
 					<span> How can I request a new browser?</span>
 					<span class="transition group-open:rotate-180">
                 <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
@@ -268,7 +392,7 @@
 		</div>
 		<div class="py-5">
 			<details class="group">
-				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+				<summary class="flex justify-between items-center font-medium cursor-pointer list-none hover:text-red-500">
 					<span> Is there a mobile app?</span>
 					<span class="transition group-open:rotate-180">
                 <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
@@ -284,7 +408,7 @@
 		</div>
 		<div class="py-5">
 			<details class="group">
-				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+				<summary class="flex justify-between items-center font-medium cursor-pointer list-none hover:text-red-500">
 					<span> What about other Chromium browsers?</span>
 					<span class="transition group-open:rotate-180">
                 <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
@@ -298,6 +422,17 @@
 				</p>
 			</details>
 		</div>
+<br>
+<br>
+
+        <button type="button" class="btn btn-purple hover:bg-bookmark-white hover:text-black">
+            More info
+        </button>
+
+<br>
+<br>
+<br>
+
 	</div>
 </div>
 
@@ -328,8 +463,9 @@
             <h1 class="text-3xl text-center">Stay up-to-date with what we are doing</h1>
             <div class="flex flex-col sm:flex-row gap-6 mt-8">
                 <input type="text" placeholder="Enter Email address" 
-                class="focus:outline-none flex-1 px-2 py-3 rounded-md text-black">
-                <button type="button" class="btn bg-bookmark-red hover:bg-bookmark-white hover:text-black">
+                class="focus:outline-none flex-1 px-2 py-3 rounded-md text-black" required
+                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                <button type="button" class="btn bg-bookmark-white cursor-pointer text-bookmark-red hover:border-solid border-2 ">
                     Contact Us
                 </button>
             </div>
@@ -344,9 +480,9 @@
         <div class="flex flex-1 flex-wrap items-center justify-center md:justify-start gap-12">
             <img src="./images/Group 11.png" alt="">
             <ul class="flex text-white uppercase gap-12 text-xs">
-                <li class="cursor-pointer">Features</li>
-                <li class="cursor-pointer">Pricing</li>
-                <li class="cursor-pointer">Contact</li>
+                <li class="cursor-pointer hover:text-red-500">Features</li>
+                <li class="cursor-pointer hover:text-red-500">Pricing</li>
+                <li class="cursor-pointer hover:text-red-500">Contact</li>
             </ul>
         </div>
         <div class="flex gap-10 mt-12 md:mt-0">
